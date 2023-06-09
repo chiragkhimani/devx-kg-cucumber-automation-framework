@@ -1,5 +1,6 @@
 Feature: Validate login functionality
 
+  @Smoke
   Scenario: Verify user can logout
     Given user open website
     Then verify user is on login page

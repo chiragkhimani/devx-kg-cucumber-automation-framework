@@ -1,3 +1,4 @@
+@ui
 Feature: Verify Cart Functionality
 
   @Smoke

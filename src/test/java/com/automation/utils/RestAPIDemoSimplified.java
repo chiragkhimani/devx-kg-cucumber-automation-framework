@@ -24,7 +24,11 @@ public class RestAPIDemoSimplified {
         // Send request and store response
         Response response = reqSpecs.log().all().post("/booking");
 
-        response.getStatusCode();
+
+        // Pojo classes we are using, so it is easier to parse json response into the class filed
+        // instead of using the JsonPath to retrieve filed one by one
+        CreateBookingPojo createBookingPojo = response.as(CreateBookingPojo.class);
+        System.out.println(createBookingPojo.getBooking().getBookingdates().getCheckin());
     }
 
     public static String readDataFromFile(String filePath) throws FileNotFoundException {

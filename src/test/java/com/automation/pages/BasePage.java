@@ -5,7 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 
-public class BasePage {
+import java.util.logging.Logger;
+
+public abstract class BasePage {
 
     WebDriver driver = DriverUtils.getDriver();
 
@@ -17,7 +19,6 @@ public class BasePage {
         try{
             return element.isDisplayed();
         }catch (Exception e){
-
             return false;
         }
     }
